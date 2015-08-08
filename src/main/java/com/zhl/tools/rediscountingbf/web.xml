@@ -1,0 +1,74 @@
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<display-name>HelloWorld Application</display-name>
+	<description>
+        This is a simple web application with a source code organization
+        based on the recommendations of the Application Developer's Guide.
+    </description>
+
+<!-- 	<servlet> -->
+<!-- 		<servlet-name>Snoop Servlet</servlet-name> -->
+<!-- 		<servlet-class>com.yahoo.hermes.ProductID.SnoopServlet</servlet-class> -->
+<!-- 	</servlet> -->
+<!-- 	<servlet-mapping> -->
+<!-- 		<servlet-name>Snoop Servlet</servlet-name> -->
+<!-- 		<url-pattern>/snoop/*</url-pattern> -->
+<!-- 	</servlet-mapping> -->
+
+<error-page>
+    <error-code>404</error-code>
+    <location>/index.html</location>
+    </error-page>
+
+<servlet>
+  <servlet-name>Jersey REST Service</servlet-name>
+	<servlet-class>
+	  com.sun.jersey.spi.container.servlet.ServletContainer
+	</servlet-class>
+	
+
+<!--   <init-param>
+    <param-name>com.sun.jersey.config.property.packages</param-name>
+    <param-value>com.yahoo.e2e.Dsp.resources</param-value>
+  </init-param> -->
+  
+  <init-param>
+    <param-name>com.sun.jersey.config.property.packages</param-name>
+    <param-value>com.yahoo.hermes.ProductID.resources</param-value>
+  </init-param>
+
+<!--   <init-param> -->
+<!--     <param-name>RedisServer</param-name> -->
+<!--     <param-value>localhost</param-value> -->
+<!--   </init-param> -->
+  <load-on-startup>1</load-on-startup>
+  
+
+  
+</servlet>
+<servlet-mapping>
+  <servlet-name>Jersey REST Service</servlet-name>
+  <url-pattern>/pid/*</url-pattern>
+</servlet-mapping>
+
+<context-param>
+    <param-name>RedisServer</param-name>
+    <param-value>savegave.corp.ne1.yahoo.com</param-value>
+</context-param>
+<context-param>
+    <param-name>RedisServer2</param-name>
+    <param-value>localhost</param-value>
+</context-param>
+<context-param>
+    <param-name>ProductsFolder2</param-name>
+    <param-value>/home/y/libexec/webapps/query250_new</param-value>
+</context-param>
+<context-param>
+    <param-name>ProductsFolder</param-name>
+    <param-value>/Users/huizhang/temp/ttt/query250_new</param-value>
+</context-param>
+
+</web-app>     
+

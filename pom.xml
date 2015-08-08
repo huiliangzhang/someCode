@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.zhl.tools</groupId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <dependencies>
+  		<dependency>
+			<groupId>redis.clients</groupId>
+			<artifactId>jedis</artifactId>
+			<version>2.5.2</version>
+		</dependency>  
+		
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.5</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-server</artifactId>
+		    <version>1.18.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-core</artifactId>
+		    <version>1.18.1</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.sun.jersey</groupId>
+		    <artifactId>jersey-servlet</artifactId>
+		    <version>1.18.1</version>
+		</dependency>
+		
+		<dependency>
+	        <groupId>com.owlike</groupId>
+	        <artifactId>genson</artifactId>
+	        <version>0.99</version>
+    	</dependency>
+		
+		<dependency>
+		  <groupId>junit</groupId>
+		  <artifactId>junit</artifactId>
+		  <version>4.11</version>
+		  <scope>test</scope>
+		</dependency>
+		
+  </dependencies>
+  <artifactId>tools</artifactId>
+</project>
